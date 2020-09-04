@@ -116,8 +116,9 @@ def fancy_footer():
 
 def output_airframe_stats(airframes):
     airframe_stats = ''
+    sorted_airframes = sorted(airframes)
 
-    for airframe in airframes:
+    for airframe in sorted_airframes:
         weapons_employed = airframes[airframe]['weaponsEmployed']
         kills = airframes[airframe]['kills']
         cockpit_time = round(airframes[airframe]['total'] / 60, 2)
@@ -165,8 +166,9 @@ def get_targets_as_str(targets):
 
 def output_weapon_stats(weapons):
     weapon_str = ''
+    sorted_weapons = sorted(weapons)
 
-    for weapon in weapons:
+    for weapon in sorted_weapons:
         kills = weapons[weapon]['kills']
         shots = weapons[weapon]['shot']
         hits = weapons[weapon]['numHits']
